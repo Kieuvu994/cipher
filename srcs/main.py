@@ -3,14 +3,25 @@ import rail_fence
 if __name__ == '__main__':
     med = input(' Please choose cipher or decipher (c/d) : ')
     if med == 'c':
-        pl = input('Enter method:  1.cesar , 2.rail-fencer , 3.cesar X rail-fence : ')
-        if pl == '1':
-            pt = input('Enter plaintext (cesar) : ')
-            key = int(input('Enter key (cesar) : '))
-            print('------------------->>>>>> CipherText (cesar) :', rail_fence.cesar(pt, key))
-        elif pl == '2':
+        # pl = input('Enter method:  1.cesar , 2.rail-fencer , 3.cesar X rail-fence : ')
+        # if pl == '1':
+        #     pt = input('Enter plaintext (cesar) : ')
+        #     key = int(input('Enter key (cesar) : '))
+        #     print('------------------->>>>>> CipherText (cesar) :', rail_fence.cesar(pt, key))
+        # elif pl == '2':
             pt = input('Enter plaintext (rail-fence) : ')
             key = int(input('Enter key (rail-fence) : '))
             print('------------------->>>>>> CipherText (rail-fence) :',
                 rail_fence.rail_fence(pt, key))
+    else:
+        # pl = input('Enter method:  1.cesar , 2.rail-fencer , 3.cesar X rail-fence : ')
+        # if pl == '1':
+        #     pt = input('Enter cipher_text (cesar) : ')
+        #     key = int(input('Enter key (cesar) : '))
+        #     print('------------------->>>>>> plain_text (cesar) :', rail_fence.cesar(pt, key))
+        # elif pl == '2':
+            pt = input('Enter cipher_text (rail-fence) : ')
+            key = int(input('Enter key (rail-fence) : '))
+            print('------------------->>>>>> plain_text (rail-fence) :',
+                rail_fence.decode_rail_fence(pt, key))
     
